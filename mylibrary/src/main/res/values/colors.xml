@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="splash_Bg">#ebfffe</color>
+    <color name="light_red">#F5DED8</color>
+    <color name="light_red_shade">#EFBCBC</color>
+    <color name="crimson_red">#DC143C</color>
+    <color name="barn_red">#7C0A02</color>
+    <color name="grey">#808080</color>
+
+    <color name="profilePrimaryDark">#FF3B30</color>
+    <color name="bottomNavigationTextColor">#B2B2B2</color>
+    <color name="profileAccentColor">#F7F7F7</color>
+
+    <color name="red_dif">#BA0C14</color>
+    <color name="light_one">#FFE1E3</color>//noti
+    <color name="orange">#e96443</color>
+    <color name="indigo">#904e95</color>
+
+    <color name="ui_red">#FF416C</color>
+    <color name="bulb_red">#ff7a7a</color>
+
+    <color name="Algerian_red">#e32636</color>
+
+    <color name="colorSliderBackground">#FF181821</color>
+    <color name="colorTextColor">#FFFFFFFF</color>
+    <color name="blue">#FF2371FA</color>
+
+    <color name="transparent">#00808080</color>
+
+    <color name="verify_gray_message">#2C2727</color>
+
+    <color name="purpul">#9930c7</color>
+    <color name="colorTextPrimary">#ffffff</color>
+    <color name="green">#008643</color>
+
+    <color name="indicatorColor">#2DFFFFFF</color>
+    <color name="iconTint">#C8FFFFFF</color>
+    <color name="iconTintActive">#ffffff</color>
+
+
+
+</resources>

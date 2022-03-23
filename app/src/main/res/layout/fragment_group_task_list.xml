@@ -1,0 +1,422 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/constraint"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/white"
+                app:title="@string/group_task"
+                app:expandedTitleTextAppearance="@style/expandedBarTextStyle"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                >
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/roboto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/finished_txt"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:drawablePadding="30dp"
+                        android:gravity="center"
+                        android:textColor="@color/blue_grey_800"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_grp_finished"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/pie_chart"
+                        app:layout_constraintTop_toTopOf="@+id/pie_chart"
+                        tools:text="41%" />
+
+                    <TextView
+                        android:id="@+id/ongoing_txt"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="30dp"
+                        android:gravity="center"
+                        android:textColor="@color/blue_grey_800"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_grp_ongoing"
+                        app:layout_constraintEnd_toEndOf="@+id/finished_txt"
+                        app:layout_constraintStart_toStartOf="@+id/finished_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/textView89"
+                        tools:text="35%" />
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shadowColorDark="@color/light_dark_white_back"
+                        app:neumorph_shadowColorLight="@color/white"
+                        app:neumorph_shadowElevation="7dp"
+                        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                        app:neumorph_shapeType="flat"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/imageBack"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:background="@drawable/circle_bg_back_pub_note"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_back"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/blue_grey_800" />
+
+                    </soup.neumorphism.NeumorphCardView>
+
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="20dp"
+                        android:textColor="@color/yellow_design_dark"
+                        android:textSize="@dimen/_17sdp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:text="@string/group_task"
+                        app:layout_constraintBottom_toBottomOf="@+id/back"
+                        app:layout_constraintEnd_toStartOf="@+id/dpcard"
+                        app:layout_constraintStart_toEndOf="@+id/back"
+                        app:layout_constraintTop_toTopOf="@+id/back" />
+
+
+                    <TextView
+                        android:id="@+id/textView89"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/finished"
+                        android:textColor="@color/grey_design_dark"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/finished_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/finished_txt" />
+
+                    <TextView
+                        android:id="@+id/textView90"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/ongoing"
+                        android:textColor="@color/grey_design_dark"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/textView89"
+                        app:layout_constraintTop_toBottomOf="@+id/ongoing_txt" />
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:id="@+id/dpcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/back"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/back"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shadowColorDark="@color/light_very_grey"
+                        app:neumorph_shadowColorLight="@color/white"
+                        app:neumorph_shadowElevation="7dp"
+                        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                        app:neumorph_shapeType="flat"
+                        tools:ignore="MissingConstraints">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_undraw_profile_pic_ic5t" />
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pie_chart"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toStartOf="@+id/finished_txt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:alignmentMode="alignMargins"
+                        android:autofillHints="@string/search_notes"
+                        android:background="@null"
+                        android:drawableStart="@drawable/ic_search_grp"
+                        android:drawablePadding="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:hint="@string/search_here"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:inputType="textNoSuggestions"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/blue_grey_800"
+                        android:textColorHint="@color/blue_grey_800"
+                        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginBottom="1dp"
+                        android:contentDescription="@string/empty"
+                        app:layout_constraintBottom_toTopOf="@+id/textView27"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/rv_content"
+                        app:srcCompat="@drawable/ic_empty_grp_data" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/amiko_bold"
+                        android:gravity="center"
+                        android:text="@string/no_tasks_right_now"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar2"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:theme="@style/CircularProgress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:scrollbars="none"
+                        app:layout_constraintBottom_toTopOf="@+id/rv_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/search">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/all"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/bg_grp_search_selector"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/all"
+                                android:textColor="@color/colorTextHint"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/bsp"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/draw_four"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/bilaspur"
+                                android:textColor="@color/colorTextHint"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/bhilai"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/draw_four"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/Bhilai"
+                                android:textColor="@color/colorTextHint"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/korba"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/draw_four"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/korba"
+                                android:textColor="@color/colorTextHint"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/champa"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/draw_four"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/champa_j"
+                                android:textColor="@color/colorTextHint"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/other"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/draw_four"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/_other_"
+                                android:textColor="@color/colorTextHint"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <!--    will be implementing recycler view insted of nested scroll view-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

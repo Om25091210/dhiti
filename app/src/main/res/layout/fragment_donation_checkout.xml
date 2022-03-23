@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    tools:context=".donation_checkout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <soup.neumorphism.NeumorphCardView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/light_dark_white_back"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/circle_bg_back_pub_note"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/blue_grey_800" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/tit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/veryLightGrey"
+        app:neumorph_shadowColorLight="@color/off_white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            android:text="@string/contribute"
+            android:textColor="@color/blue_grey_800"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/card_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/light_dark_white_back"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeAppearance="@style/rect_shape_appearance"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageNote"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_image_holder"
+                android:visibility="visible"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius_top_left="@dimen/_20sdp"
+                app:riv_corner_radius_top_right="@dimen/_20sdp"
+                app:riv_corner_radius_bottom_left="@dimen/_20sdp"
+                app:riv_corner_radius_bottom_right="@dimen/_20sdp"
+                tools:ignore="ImageContrastCheck" />-->
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imageNote"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image"
+                android:scaleType="centerCrop"
+                app:roundedCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:failureImage="@drawable/ic_image_holder"
+                fresco:placeholderImage="@drawable/ic_image_holder"
+                />
+
+            <TextView
+                android:id="@+id/textView124"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/design_brown_text"
+                tools:text="Donate for hunger people"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageNote" />
+
+            <TextView
+                android:id="@+id/by"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/by_dhiti_foundation"
+                android:textColor="@color/design_brown_text"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView124" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:id="@+id/textView125"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="@string/how_much_wanna_donate"
+            android:textColor="@color/design_brown_text"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/card_details"
+            app:layout_constraintStart_toStartOf="@+id/card_details"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+        <TextView
+            android:id="@+id/textView128"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:textColor="@color/target_color"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/card_details"
+            app:layout_constraintStart_toStartOf="@+id/card_details"
+            app:layout_constraintTop_toBottomOf="@+id/textView126"
+            tools:text="Omee" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:buttonTint="@color/target_color"
+            android:text="@string/hide_identity"
+            android:textColor="@color/target_color"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView128" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints="name"
+            android:background="@drawable/bg_amount_edittext"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:hint="@string/enter_price"
+            android:inputType="number"
+            android:padding="15dp"
+            android:textColor="@color/design_dark_grey_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/amount_field_theme"
+            app:layout_constraintEnd_toEndOf="@+id/card_details"
+            app:layout_constraintStart_toStartOf="@+id/card_details"
+            app:layout_constraintTop_toBottomOf="@+id/textView125"
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="@string/or"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/thousand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border_amount_bg"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/_1000"
+            android:textColor="@color/design_dark_grey_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/five_hundred"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border_amount_bg"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/_500"
+            android:textColor="@color/design_dark_grey_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+            app:layout_constraintTop_toBottomOf="@+id/thousand"
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/three_hundred"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border_amount_bg"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/_300"
+            android:textColor="@color/design_dark_grey_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+            app:layout_constraintTop_toBottomOf="@+id/five_hundred"
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+        android:id="@+id/textView126"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/_9sdp"
+        android:gravity="center"
+        android:textColor="@color/blue_grey_600"
+        android:layout_marginEnd="20dp"
+        android:text="@string/most_donors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_details" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/proceed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/three_hundred"
+            app:layout_constraintStart_toStartOf="@+id/three_hundred"
+            app:layout_constraintTop_toBottomOf="@+id/three_hundred"
+            app:neumorph_lightSource="leftTop"
+            app:neumorph_shadowColorDark="@color/veryLightGrey"
+            app:neumorph_shadowColorLight="@color/off_white"
+            app:neumorph_shadowElevation="7dp"
+            app:neumorph_shapeType="flat"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/proceed_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/proceed__"
+                android:textColor="@color/light_blue_700"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_done"
+                app:drawableTint="@color/light_blue_700" />
+
+        </soup.neumorphism.NeumorphCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

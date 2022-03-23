@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "312761775781",
+    "firebase_url": "https://dhiti-foundation-default-rtdb.firebaseio.com",
+    "project_id": "dhiti-foundation",
+    "storage_bucket": "dhiti-foundation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312761775781:android:c428d1697a33c4064dff4c",
+        "android_client_info": {
+          "package_name": "com.aryomtech.dhitifoundation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312761775781-iqse9jpl13d28op92k9lqf5l7pps1oj5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aryomtech.dhitifoundation",
+            "certificate_hash": "696ddc7ddf1c1e46fd60c9ce4ae0d2310cda4c3c"
+          }
+        },
+        {
+          "client_id": "312761775781-m8fkq90549jq2mm55gijnhm558nfkek2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aryomtech.dhitifoundation",
+            "certificate_hash": "cf388bb7fa6f7ea09ceb2c9b0d8493204dfae0aa"
+          }
+        },
+        {
+          "client_id": "312761775781-k1i9nojrdg539blofoeege5hasgp6acn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgmAi1KOscybhPxRF_XNv2ebS7CgyWjVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312761775781-k1i9nojrdg539blofoeege5hasgp6acn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

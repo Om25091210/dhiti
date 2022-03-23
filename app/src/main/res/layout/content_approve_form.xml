@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/card_grp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:paddingBottom="20dp"
+    android:background="@drawable/add_person_bg"
+    android:backgroundTint="@color/mid_mid_white">
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tool:text="9301982112"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/quicksand_medium"
+        app:layout_constraintEnd_toEndOf="@+id/textView131"
+        app:layout_constraintStart_toStartOf="@+id/textView131"
+        app:layout_constraintTop_toBottomOf="@+id/textView131" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView131"
+        app:layout_constraintStart_toStartOf="@+id/textView131"
+        app:layout_constraintTop_toBottomOf="@+id/textView132"
+        tool:text="Adarsh Nagar Rd" />
+
+    <TextView
+        android:id="@+id/textView131"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:fontFamily="@font/quicksand_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView84"
+        app:layout_constraintStart_toStartOf="@+id/textView84"
+        app:layout_constraintTop_toBottomOf="@+id/textView84"
+        tool:text="omyadav04352@gmail.com" />
+
+    <View
+        android:id="@+id/view14"
+        android:layout_width="50dp"
+        android:layout_height="5dp"
+        android:background="@color/design_medium_yellow"
+        android:layout_marginStart="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- add a Image image.png in your Drawable folder -->
+        <TextView
+            android:id="@+id/head1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/design_dark_yellow"
+            android:contentDescription="@string/image"
+            android:gravity="center"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            tool:ignore="TextContrastCheck"
+            tool:text="T" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textView84"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/quicksand_medium"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        tool:text="Skiing" />
+
+    <TextView
+        android:id="@+id/textView86"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:textColor="@color/blue_grey_800"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/textView84"
+        app:layout_constraintStart_toStartOf="@+id/textView84"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        tool:text="8 people" />
+
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_join"
+        android:backgroundTint="@color/amber_100"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/view"
+        android:textColor="@color/colorQuickActionsBackground"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView86"
+        tool:ignore="TextContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

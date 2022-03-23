@@ -1,0 +1,899 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/light_red"
+            app:expandedTitleTextAppearance="@style/expandedBarTextStyle"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="@string/dhiti_welfare_foundation_volunteer_form">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_app_bar_background"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:gravity="center"
+                    android:text="@string/dhiti_welfare_foundation_volunteer_form"
+                    android:textColor="@color/barn_red"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="@string/making_a_peaceful_place"
+                    android:textColor="@color/Algerian_red"
+                    android:textSize="20sp"
+
+                    />
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/pre_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_a_member"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="20dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    app:neumorph_backgroundColor="@color/Algerian_red"
+                    android:textColor="@color/white"
+                    app:neumorph_shapeType="flat"
+                    style="@style/Widget.Neumorph.CardView"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowColorDark="@color/white"
+                    />
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/chapter_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_m_a_chapter_head"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="20dp"
+                    android:gravity="center"
+                    app:neumorph_backgroundColor="@color/Algerian_red"
+                    android:textColor="@color/white"
+                    app:neumorph_shapeType="flat"
+                    style="@style/Widget.Neumorph.CardView"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowColorDark="@color/white"
+                    />
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/guest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/continue_as_guest"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="20dp"
+                    android:gravity="center"
+                    app:neumorph_backgroundColor="@color/Algerian_red"
+                    android:textColor="@color/white"
+                    app:neumorph_shapeType="flat"
+                    style="@style/Widget.Neumorph.CardView"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowColorDark="@color/white"
+                    />
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_as_a_member"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="20dp"
+                    android:gravity="center"
+                    app:neumorph_backgroundColor="@color/Algerian_red"
+                    android:textColor="@color/white"
+                    app:neumorph_shapeType="flat"
+                    style="@style/Widget.Neumorph.CardView"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowColorDark="@color/white"
+                    />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--    will be implementing recycler view insted of nested scroll view-->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscroll0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/name"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/blood_group"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Blood group"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/city"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="City"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/contact"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="contact"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="number"
+                android:maxLength="10"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/address"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Address"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/qualification"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="qualification"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/profession"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Profession"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/email"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView88"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/age"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="@string/select"
+                android:gravity="start|top"/>
+
+            <TextView
+                android:id="@+id/textView99"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/gender"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <io.ghyeok.stickyswitch.widget.StickySwitch
+                android:id="@+id/sticky_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:ss_animationDuration="600"
+                app:ss_animationType="line"
+                app:ss_iconPadding="14dp"
+                app:ss_iconSize="16dp"
+                app:ss_leftIcon="@drawable/ic_male"
+                app:ss_leftText="Male"
+                app:ss_rightIcon="@drawable/ic_female"
+                app:ss_rightText="Female"
+                app:ss_selectedTextSize="12sp"
+                app:ss_sliderBackgroundColor="@color/colorSliderBackground"
+                app:ss_switchColor="@color/crimson_red"
+                app:ss_textColor="@color/Algerian_red"
+                app:ss_textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/from_where_you_got_to_know_about_dhiti_welfare_foundation" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:theme="@style/EditTheme"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="@string/your_answer"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:autofillHints="answer"/>
+
+            <TextView
+                android:id="@+id/textView101"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/how_would_you_like_to_dedicate_your_time_for_dhiti" />
+
+            <RadioGroup
+                android:id="@+id/rg0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/daily"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/weekly"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/other"
+                    android:theme="@style/red_radio" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="answer"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/suggest_how_you_can_help_dhiti" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:theme="@style/EditTheme"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="@string/your_answer"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:autofillHints="answer" />
+
+            <TextView
+                android:id="@+id/textView103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/do_you_want_to_start_dhiti_welfare_foundation_at_your_city" />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/r4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/yes"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/no"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/later"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/none"
+                    android:theme="@style/red_radio" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/would_you_like_to_represent_dhiti_foundation_in_your_school_college_workplace" />
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/r7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/yes"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/no"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/none"
+                    android:theme="@style/red_radio" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/any_experience_in_community_service" />
+
+            <RadioGroup
+                android:id="@+id/rg3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/r9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/yes"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/no"
+                    android:theme="@style/red_radio" />
+
+                <RadioButton
+                    android:id="@+id/r03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/none"
+                    android:theme="@style/red_radio" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView106"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/why_would_you_like_to_join_dhiti_foundation" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:theme="@style/EditTheme"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="@string/your_answer"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:autofillHints="answer" />
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/name_of_school_college" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:theme="@style/EditTheme"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="@string/your_answer"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:autofillHints="answer" />
+
+            <TextView
+                android:id="@+id/upload_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/upload_your_photo" />
+
+            <TextView
+                android:id="@+id/select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/red_100"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/profile_editext_shape"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/select_photo" />
+
+            <ImageView
+                android:id="@+id/imageNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/body"
+                app:layout_constraintStart_toStartOf="@+id/view13"
+                app:layout_constraintTop_toBottomOf="@+id/body" />
+
+            <ImageView
+                android:id="@+id/imageRemoveImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_delete"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/imageNote"
+                app:layout_constraintTop_toTopOf="@id/imageNote"
+                app:tint="@color/white"
+                />
+
+
+            <TextView
+                android:id="@+id/textView108"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/helveticabold"
+                android:textColor="@color/bulb_red"
+                android:text="@string/would_to_like_to_dedicate_your_talent_in_dhiti_if_yes_then_select_the_department_you_would_like_to_work_in" />
+
+            <CheckBox
+                android:id="@+id/c1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/content_writting"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/graphic_designing"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/event_management"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/public_relation"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/sponsership_and_finance"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/creatives_amp_decoration_work"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/photography"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/cultural_activity"
+                android:theme="@style/colored_checkBox" />
+
+            <CheckBox
+                android:id="@+id/c9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="@string/other"
+                android:theme="@style/colored_checkBox" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:theme="@style/EditTheme"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:hint="@string/your_answer"
+                android:gravity="start|top"
+                android:visibility="gone"
+                android:inputType="textNoSuggestions"
+                android:autofillHints="answer" />
+
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:gravity="center"
+                app:neumorph_backgroundColor="@color/Algerian_red"
+                android:textColor="@color/white"
+                app:neumorph_shapeType="flat"
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_shadowElevation="6dp"
+                app:neumorph_shadowColorLight="@color/light_red"
+                app:neumorph_shadowColorDark="@color/light_red"
+                />
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
