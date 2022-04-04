@@ -1,5 +1,9 @@
 # dhiti
+The project files are in master branch of this repo
+
 This  App is in playstore : https://play.google.com/store/apps/details?id=com.aryomtech.dhitifoundation
+
+Youtube link : https://youtu.be/bSySDW2uOdo
 
 1. Login with any email or phone number.
 2. Select your location.
