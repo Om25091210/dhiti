@@ -42,5 +42,8 @@ When you will scroll in the home section of the app you will see different work 
 
 Click a card to see the overview of the work or cause, On the top of which you will be able to share it to different apps. User can simply come through your link in order to contribute the work or cause for every Contribution from your link you will get some points.
 
+If they don't have the app installed in their device they can simply open the link from their brower and proceed with the contributions.
 
 This app is made using Firebase, Android studio and Google Cloud.
+
+Google is ❤️.
