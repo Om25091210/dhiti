@@ -73,7 +73,7 @@ public class refferal extends Fragment {
 
         imageBack.setOnClickListener(v->back());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setItemViewCacheSize(20);
+        recyclerView.setItemViewCacheSize(500);
         recyclerView.setLayoutManager(layoutManager);
 
         // This callback will only be called when MyFragment is at least Started.

@@ -95,7 +95,7 @@ public class fluid_Overview extends Fragment {
     SimpleDraweeView draweeView;
     TextView msg_custom,cause_1,cause_2,cause_3,cause_4,cause_5,cause_6;
     TextView goal_txt,contributed_txt,target_txt,supporters_txt,raised_by_share
-            ,sub_heading_1,content_1,sub_heading_2,content_2,location,date_or_msg,enable_donations,donating;
+            ,sub_heading_1,content_1,sub_heading_2,content_2,location,date_or_msg,see_registrations,set_form,enable_registrations,registring,enable_donations,donating;
     String title_args,image_link_args,check_donation_args
             ,location_args,date_or_msg_args,target_args,contributed_args,key,deep_link_uid_value
             ,goal_args,sub_heading_1_args,sub_heading_2_args,content_1_args,content_2_args;
@@ -140,6 +140,10 @@ public class fluid_Overview extends Fragment {
         donate_but=view.findViewById(R.id.button3);
         raised_by_share=view.findViewById(R.id.raised_by_share);
         enable_donations=view.findViewById(R.id.enable_donations);
+        enable_registrations=view.findViewById(R.id.enable_registrations);
+        registring=view.findViewById(R.id.registring);
+        set_form=view.findViewById(R.id.set_form);
+        see_registrations=view.findViewById(R.id.see_registrations);
         donating=view.findViewById(R.id.donating);
         rv_donation=view.findViewById(R.id.rv_donation);
         search=view.findViewById(R.id.search);
@@ -169,6 +173,10 @@ public class fluid_Overview extends Fragment {
         not_found.setVisibility(View.GONE);
         donating.setVisibility(View.GONE);
         enable_donations.setVisibility(View.GONE);
+        enable_registrations.setVisibility(View.GONE);
+        registring.setVisibility(View.GONE);
+        set_form.setVisibility(View.GONE);
+        see_registrations.setVisibility(View.GONE);
         search_neumorph.setVisibility(View.GONE);
         if(identity.equals("admin")) {
             raised_by_share.setVisibility(View.VISIBLE);
@@ -196,6 +204,33 @@ public class fluid_Overview extends Fragment {
                     .addToBackStack(null)
                     .commit();
         });
+        set_form.setOnClickListener(v->{
+            reg_form reg_form=new reg_form();
+            Bundle args=new Bundle();
+            args.putString("keys_for_creating_donation",key);
+            reg_form.setArguments(args);
+
+            ((FragmentActivity) v.getContext()).getSupportFragmentManager()
+                    .beginTransaction()
+                    .setCustomAnimations( R.anim.enter_from_right, R.anim.exit_to_left,R.anim.enter_from_left, R.anim.exit_to_right)
+                    .add(R.id.drawer, reg_form)
+                    .addToBackStack(null)
+                    .commit();
+        });
+        registring.setOnClickListener(v->{
+            Register_cause reg_form=new Register_cause();
+            Bundle args=new Bundle();
+            args.putString("keys_for_creating_donation",key);
+            reg_form.setArguments(args);
+
+            ((FragmentActivity) v.getContext()).getSupportFragmentManager()
+                    .beginTransaction()
+                    .setCustomAnimations( R.anim.enter_from_right, R.anim.exit_to_left,R.anim.enter_from_left, R.anim.exit_to_right)
+                    .add(R.id.drawer, reg_form)
+                    .addToBackStack(null)
+                    .commit();
+        });
+
         raised_by_share.setOnClickListener(v->{
             refferal refferal=new refferal();
             Bundle args=new Bundle();
@@ -456,6 +491,32 @@ public class fluid_Overview extends Fragment {
                 enable_donations.setText(undo);
             }
         });
+        enable_registrations.setOnClickListener(v->{
+            if(enable_registrations.getText().toString().equals("Enable Registrations")) {
+                fluid_ref.child(key).child("other_reg").setValue("enabled");
+                String undo="Undo Reg.";
+                enable_registrations.setText(undo);
+                Toast.makeText(getContext(), "Registrations enabled for this event. Reopen to see", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                fluid_ref.child(key).child("other_reg").removeValue();
+                String undo="Enable Registrations";
+                enable_registrations.setText(undo);
+            }
+        });
+        see_registrations.setOnClickListener(v->{
+            see_registration reg_form=new see_registration();
+            Bundle args=new Bundle();
+            args.putString("keys_for_creating_donation",key);
+            reg_form.setArguments(args);
+
+            ((FragmentActivity) v.getContext()).getSupportFragmentManager()
+                    .beginTransaction()
+                    .setCustomAnimations( R.anim.enter_from_right, R.anim.exit_to_left,R.anim.enter_from_left, R.anim.exit_to_right)
+                    .add(R.id.drawer, reg_form)
+                    .addToBackStack(null)
+                    .commit();
+        });
         check_other_donations();
 
         donate_but.setOnClickListener(v->{
@@ -653,6 +714,32 @@ public class fluid_Overview extends Fragment {
                     if(identity.equals("admin"))
                         enable_donations.setVisibility(View.VISIBLE);
                     donating.setVisibility(View.GONE);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}
+        });
+
+        fluid_ref.child(key).child("other_reg").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    registring.setVisibility(View.VISIBLE);
+                    if (identity.equals("admin")) {
+                        set_form.setVisibility(View.VISIBLE);
+                        enable_registrations.setVisibility(View.VISIBLE);
+                        see_registrations.setVisibility(View.VISIBLE);
+                        String undo="Undo";
+                        enable_registrations.setText(undo);
+                    }
+                }
+                else{
+                    if(identity.equals("admin")) {
+                        set_form.setVisibility(View.VISIBLE);
+                        enable_registrations.setVisibility(View.VISIBLE);
+                        see_registrations.setVisibility(View.VISIBLE);
+                    }registring.setVisibility(View.GONE);
+                    set_form.setVisibility(View.GONE);
                 }
             }
             @Override

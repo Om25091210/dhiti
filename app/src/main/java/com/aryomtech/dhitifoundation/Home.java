@@ -45,6 +45,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -104,6 +105,15 @@ public class Home extends AppCompatActivity  implements DuoMenuView.OnMenuClickL
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(ContextCompat.getColor(Home.this, R.color.white));
         window.setNavigationBarColor(ContextCompat.getColor(Home.this, R.color.red_200));
+
+        FirebaseMessaging.getInstance().subscribeToTopic("/topics/myTopic2")
+                .addOnCompleteListener(task -> {
+                    String msg = "Done";
+                    if (!task.isSuccessful()) {
+                        msg = "Failed";
+                    }
+                    Log.d("topic_log", msg);
+                });
 
         bottomBar=findViewById(R.id.bottomBar);
         bottomBar.setItemActiveIndex(1);

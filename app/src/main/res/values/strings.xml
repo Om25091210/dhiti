@@ -373,7 +373,7 @@ Along with this concepts we have been working on development of nation with the 
     <string name="_9_set_slider">9. Request Fee</string>
     <string name="fill_quality_content">Fill quality content.</string>
     <string name="enable_donation_">Enable donation</string>
-    <string name="donate_cloths_food_etc_for_this_event">Click to Donate cloths, food etc...</string>
+    <string name="donate_cloths_food_etc_for_this_event">Click to Donate cloths, food etc…</string>
     <string name="donate_">Donate</string>
     <string name="donating_for_needy_people">Donating for needy people</string>
     <string name="click_to_add_photo">Click to add photo</string>
@@ -407,6 +407,22 @@ Along with this concepts we have been working on development of nation with the 
     <string name="upload_your_photo">Upload your Aadhaar Card Photo</string>
     <string name="select_photo">Select photo</string>
     <string name="download">Download</string>
+    <string name="enable_registrations">Enable Registrations</string>
+    <string name="register_here">Register here</string>
+    <string name="set_form">Set Form</string>
+    <string name="head_1">Head 1</string>
+    <string name="head_2">Head 2</string>
+    <string name="head_3">Head 3</string>
+    <string name="head_4">Head 4</string>
+    <string name="head_5">Head 5</string>
+    <string name="head_6">Head 6</string>
+    <string name="head_7">Head 7</string>
+    <string name="head_8">Head 8</string>
+    <string name="head_9">Head 9</string>
+    <string name="head_10">Head 10</string>
+    <string name="registration">Registration</string>
+    <string name="see_registrations">See Registrations</string>
+    <string name="registrations">Registrations</string>
 
     <array name="menuOptions">
         <item>Home</item>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="match_parent"
+    tools:context=".Profile.Edit_profile">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/light_dark_white_back"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/circle_bg_back_pub_note"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/blue_grey_800" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/save"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="save.json"
+        app:lottie_loop="true" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/neumorphCardView2">
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_1"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_2"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Address"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_3"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_4"
+                android:inputType="textNoSuggestions"
+                android:maxLength="12"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="Email"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_5"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_6"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine189"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_7"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine191"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_8"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine193"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_9"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine195"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/head_10"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

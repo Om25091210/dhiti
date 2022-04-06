@@ -67,13 +67,17 @@ public class donation_Adapter extends RecyclerView.Adapter<donation_Adapter.View
         this.list=list;
         this.key=key;
         this.identity=identity;
-        Fresco.initialize(
-                context,
-                ImagePipelineConfig.newBuilder(context)
-                        .setMemoryChunkType(MemoryChunkType.BUFFER_MEMORY)
-                        .setImageTranscoderType(ImageTranscoderType.JAVA_TRANSCODER)
-                        .experiment().setNativeCodeDisabled(true)
-                        .build());
+        try {
+            Fresco.initialize(
+                    context,
+                    ImagePipelineConfig.newBuilder(context)
+                            .setMemoryChunkType(MemoryChunkType.BUFFER_MEMORY)
+                            .setImageTranscoderType(ImageTranscoderType.JAVA_TRANSCODER)
+                            .experiment().setNativeCodeDisabled(true)
+                            .build());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @NonNull

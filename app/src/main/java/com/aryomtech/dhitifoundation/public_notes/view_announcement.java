@@ -478,7 +478,7 @@ public class view_announcement extends Fragment {
                 startActivity(Intent.createChooser(sharingIntent, "Share using"));
             }
             else{
-                if(share_ready) {
+                try {
                     /*BitmapDrawable drawable = (BitmapDrawable) image_view.getDrawable();
                     Bitmap bitmap = drawable.getBitmap();*/
                     Uri bitmapUri = getLocalBitmapUri();
@@ -491,9 +491,8 @@ public class view_announcement extends Fragment {
                     intent.putExtra(Intent.EXTRA_TEXT, title + "\n\n" + "This is a playstore link to download.. " + "https://play.google.com/store/apps/details?id=" + getContextNullSafety().getPackageName());
 
                     startActivity(Intent.createChooser(intent, "Share"));
-                }
-                else{
-                    Toast.makeText(getContext(), "Image not loaded.", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         });
