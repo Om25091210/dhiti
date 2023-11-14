@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Profile.Edit_profile">
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="rightBottom"
+        app:neumorph_shadowColorDark="@color/light_one"
+        app:neumorph_shadowColorLight="@color/light_one"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:foreground="@drawable/ic_camera"
+            tools:ignore="ImageContrastCheck"
+            android:src="@drawable/ic_undraw_profile_pic_ic5t"/>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/light_dark_white_back"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/circle_bg_back_pub_note"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/blue_grey_800" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/neumorphCardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/neumorphCardView2">
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/change_name"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/your_part_in_dhiti"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/city_"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/simpleSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="City"
+                android:ems="10"
+                android:hint="@string/eych"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/phone"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="contact"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/address_"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Address"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/e_mail"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="qualification"
+                android:ems="10"
+                android:hint="@string/space"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/aadhar_no"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Profession"
+                android:ems="10"
+                android:hint="@string/space"
+                android:maxLength="12"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/facebook_link"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:hint="@string/add_link"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+            <TextView
+                android:id="@+id/textView78"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/twitter_id_link"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:hint="@string/add_link"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView79"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/linkedin_id"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:hint="@string/add_link"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/whatsapp_no"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:hint="@string/add_number"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/instagram_id"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Email"
+                android:ems="10"
+                android:hint="@string/user_id"
+                android:padding="15dp"
+                android:background="@drawable/profile_editext_shape"
+                android:gravity="start|top"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/upload"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="upload.json"
+        app:lottie_loop="true"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

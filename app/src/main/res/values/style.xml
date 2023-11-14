@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/light_red</item>
+        <item name="colorControlActivated">@color/crimson_red</item>
+        <item name="colorControlHighlight">@color/crimson_red</item>
+    </style>
+
+    <style name="EditTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="colorControlActivated">@color/crimson_red</item>
+        <item name="colorControlHighlight">@color/crimson_red</item>
+    </style>
+
+    <style name="colored_checkBox" parent="Theme.AppCompat.Light">
+        <!-- selected checkbox color -->
+        <item name="colorAccent">@android:color/holo_red_light</item>
+        <!-- default/unselected checkbox color -->
+        <item name="android:textColorSecondary">@android:color/darker_gray</item>
+    </style>
+
+    <style name="set_event" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="colorControlActivated">@color/calendar_status</item>
+        <item name="colorControlHighlight">@color/calendar_status</item>
+    </style>
+
+    <style name="note_pub_editext" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="colorControlActivated">@color/green_100</item>
+        <item name="colorControlHighlight">@color/green_100</item>
+    </style>
+
+    <style name="CustomShapeAppearance">
+        <item name="neumorph_cornerFamily">oval</item>
+    </style>
+
+    <style name="rect_shape_appearance">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSizeTopLeft">20dp</item>
+        <item name="neumorph_cornerSizeTopRight">20dp</item>
+        <item name="neumorph_cornerSizeBottomLeft">20dp</item>
+        <item name="neumorph_cornerSizeBottomRight">20dp</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circle_progress</item>
+    </style>
+    <style name="tasktheme_personal" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="colorControlActivated">@color/yellow_50</item>
+        <item name="colorControlHighlight">@color/yellow_50</item>
+    </style>
+    <style name="tasktheme_personal_name" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/yellow_500</item>
+        <item name="colorControlActivated">@color/yellow_500</item>
+        <item name="colorControlHighlight">@color/yellow_500</item>
+    </style>
+    <style name="tasktheme_personal_bg" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/yellow_900</item>
+        <item name="colorControlActivated">@color/yellow_900</item>
+        <item name="colorControlHighlight">@color/yellow_900</item>
+    </style>
+    <style name="grp_theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="colorControlActivated">@color/cyan_design_medium</item>
+        <item name="colorControlHighlight">@color/cyan_design_dark</item>
+    </style>
+    <style name="grp_theme_loc" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/cyan_design</item>
+        <item name="colorControlActivated">@color/cyan_design_medium</item>
+        <item name="colorControlHighlight">@color/cyan_design_dark</item>
+    </style>
+    <style name="amount_field_theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="colorControlActivated">@color/blue_500</item>
+        <item name="colorControlHighlight">@color/blue_500</item>
+    </style>
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/grey</item>
+    </style>
+    <style name="CustomTextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

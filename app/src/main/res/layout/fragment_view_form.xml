@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".admin_panel.Approve_Forms.Adapter.View_form">
+
+    <ImageView
+        android:id="@+id/del"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/tit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tit"
+        app:tint="@color/colorDelete" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/light_dark_white_back"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/circle_bg_back_pub_note"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/blue_grey_800" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/tit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/veryLightGrey"
+        app:neumorph_shadowColorLight="@color/off_white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            android:text="@string/membership_form"
+            android:textColor="@color/blue_grey_800"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back">
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                fresco:roundedCornerRadius="20dp"
+                android:contentDescription="@string/image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:failureImage="@drawable/ic_image_holder"
+                fresco:placeholderImage="@drawable/ic_image_holder"
+                />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/name"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/blood_group"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/city"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/contact"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/address"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/qualification"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/profession"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/email"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView88"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/age"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView99"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/gender"
+                android:textStyle="bold"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sticky_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/from_where_you_got_to_know_about_dhiti_welfare_foundation"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView101"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/how_would_you_like_to_dedicate_your_time_for_dhiti"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/suggest_how_you_can_help_dhiti"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/do_you_want_to_start_dhiti_welfare_foundation_at_your_city"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine1204"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/would_you_like_to_represent_dhiti_foundation_in_your_school_college_workplace"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine1205"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/any_experience_in_community_service"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine1206"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView106"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/why_would_you_like_to_join_dhiti_foundation"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/name_of_school_college"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView108"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/would_to_like_to_dedicate_your_talent_in_dhiti_if_yes_then_select_the_department_you_would_like_to_work_in"
+                android:textColor="@color/bulb_red"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/editTextTextMultiLine18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:ems="10"
+                tools:text="Name"
+                android:textSize="16sp" />
+
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/submit"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="@string/approve"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:neumorph_backgroundColor="@color/Algerian_red"
+                app:neumorph_shadowColorDark="@color/light_red"
+                app:neumorph_shadowColorLight="@color/light_red"
+                app:neumorph_shadowElevation="6dp"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/download"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="@string/download"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:neumorph_backgroundColor="@color/Algerian_red"
+                app:neumorph_shadowColorDark="@color/light_red"
+                app:neumorph_shadowColorLight="@color/light_red"
+                app:neumorph_shadowElevation="6dp"
+                app:neumorph_shapeType="flat" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

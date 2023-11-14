@@ -1,0 +1,5 @@
+rootProject.name = "Dhiti Foundation"
+include ':app'
+include ':mylibrary'
+include ':mylibrary2'
+include ':mylibrary3'

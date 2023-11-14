@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/view_card_adpater"
+    android:layout_marginEnd="10dp"
+    android:orientation="horizontal">
+
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_undraw_profile_pic_ic5t"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:scaleType="centerCrop"
+            app:failureImage="@drawable/ic_undraw_profile_pic_ic5t"
+            fresco:placeholderImage="@drawable/ic_undraw_profile_pic_ic5t"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
+
+
+        <TextView
+                android:id="@+id/textView9"
+                android:layout_marginStart="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amiko_bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginBottom="5dp"
+                android:maxLength="35"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:layout_marginEnd="5dp"
+                tools:text="@tools:sample/full_names" />
+
+
+            <TextView
+                android:id="@+id/part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="start"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorSearchBackground"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="visible"
+                tools:text="@tools:sample/cities" />
+
+        </LinearLayout>
+
+</LinearLayout>

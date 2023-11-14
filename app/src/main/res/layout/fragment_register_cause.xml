@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="match_parent"
+    tools:context=".Profile.Edit_profile">
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:theme="@style/CircularProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tit" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/light_dark_white_back"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/circle_bg_back_pub_note"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/blue_grey_800" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/tit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/veryLightGrey"
+        app:neumorph_shadowColorLight="@color/off_white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            android:text="@string/registration"
+            android:textColor="@color/blue_grey_800"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/veryLightGrey"
+        app:neumorph_shadowColorLight="@color/off_white"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeType="flat"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageSave"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_done"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back"
+            app:tint="@color/blue_grey_800"
+            tools:ignore="ImageContrastCheck" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:paddingTop="10dp"
+            android:layout_marginHorizontal="25dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="username"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="start|top"
+                android:layout_marginTop="10dp"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Address"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="password"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:maxLength="12"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine6" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="postalCode"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="start|top"
+                android:layout_marginTop="10dp"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine8" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="postalAddress"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine10" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine189"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="password"
+                android:visibility="gone"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:layout_marginTop="10dp"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine189" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine191"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="postalCode"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="start|top"
+                android:layout_marginTop="10dp"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine191" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine193"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="postalCode"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine193" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine195"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="postalCode"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:visibility="gone"
+                android:gravity="start|top"
+                android:hint="@string/your_answer"
+                android:inputType="textNoSuggestions"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

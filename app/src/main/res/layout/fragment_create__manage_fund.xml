@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".admin_panel.Create_ManageFund">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        >
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_lightSource="leftTop"
+            app:neumorph_shadowColorDark="@color/light_dark_white_back"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="7dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="flat"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imageBack"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:background="@drawable/circle_bg_back_pub_note"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/blue_grey_800" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <ImageView
+            android:id="@+id/del"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toStartOf="@+id/imageSave"
+            app:layout_constraintTop_toTopOf="@+id/back"
+            app:tint="@color/colorDelete" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back">
+
+            <RelativeLayout
+                android:id="@+id/overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/sampleImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/sampleImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:progress="65"
+                    android:progressDrawable="@drawable/recbgprogress"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sampleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressBar"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:paddingBottom="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/design_brown_text"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    tools:ignore="TextContrastCheck"
+                    tools:text="My Little Boy’s Cancer Has Relapsed Twice But I’m Helpless. Please Save Him from death." />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sampleTextView"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                    app:layout_constraintStart_toStartOf="@+id/progressBar">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView98"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold"
+                            tools:text="₹ 2,56,23,048" />
+
+                        <TextView
+                            android:id="@+id/txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/raised_out_of"
+                            android:textColor="@color/target_color"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView109"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textColor="@color/target_color"
+                        android:textSize="@dimen/_9sdp"
+                        tools:text="₹ 5,00,00,000" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewBottom2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/donate"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/colorDefaultNoteColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    tools:text="with Vedanta Foundation" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewBottom2"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/heart"
+                    android:textColor="@color/colorDefaultNoteColor"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewBottom2" />
+
+                <TextView
+                    android:id="@+id/deadline_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/colorDefaultNoteColor"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="visible"
+                    tools:text="ends on 31-07-2021" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/donate"
+                    android:layout_width="150dp"
+                    android:layout_height="52dp"
+                    android:layout_below="@+id/linearLayout11"
+                    android:layout_alignStart="@+id/sampleTextView"
+                    android:layout_alignEnd="@+id/sampleTextView"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@android:color/white"
+                    android:padding="14dp"
+                    android:translationZ="8dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/textView111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="@string/donate"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
+                        tools:ignore="TextContrastCheck" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            tools:layout_editor_absoluteX="25dp">
+
+            <TextView
+                android:id="@+id/textView114"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/goal"
+                android:textColor="@color/text_parent_color"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_goal_flag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+            <EditText
+                android:id="@+id/field_goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/event_or_cause_title"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="name"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:background="@drawable/bg_of_add_donations"
+                android:backgroundTint="@color/grey"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/add_image"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/donation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:background="@drawable/bg_of_add_donations"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/add_donations"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/target_amount"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/amount_raised"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/location_"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/ending_date"
+                android:textColor="@color/text_parent_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView116"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/sub_heading_1"
+                android:textColor="@color/text_parent_color"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView117"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/content"
+                android:textColor="@color/text_parent_color"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView118"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/sub_heading_2"
+                android:textColor="@color/text_parent_color"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/content"
+                android:textColor="@color/text_parent_color"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/space"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/he"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/add_custom_donations"
+                android:textColor="@color/text_parent_color"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+            <EditText
+                android:id="@+id/custom_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:backgroundTint="@color/blue_A100"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/enter_here"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/custom_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:backgroundTint="@color/blue_A100"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/enter_here"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/custom_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:backgroundTint="@color/blue_A100"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/enter_here"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/custom_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:backgroundTint="@color/blue_A100"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/enter_here"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/custom_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:backgroundTint="@color/blue_A100"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/enter_here"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+            <EditText
+                android:id="@+id/custom_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:autofillHints="Blood group"
+                android:background="@drawable/profile_editext_shape"
+                android:backgroundTint="@color/blue_A100"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/enter_here"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:theme="@style/EditTheme" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageSave"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_done_button"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_done"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back"
+            app:tint="@color/black"
+            tools:ignore="ImageContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

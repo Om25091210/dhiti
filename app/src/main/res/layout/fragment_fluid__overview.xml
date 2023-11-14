@@ -1,0 +1,887 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/constraint"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/white"
+            app:expandedTitleTextAppearance="@style/expandedBarTextStyle"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/roboto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--<ImageView
+                    android:id="@+id/sampleImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_image_holder"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/back"
+                    tools:ignore="ImageContrastCheck" />-->
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sampleImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/back"
+                    app:failureImage="@drawable/ic_image_holder"
+                    fresco:placeholderImage="@drawable/ic_image_holder"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/not_found"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_140sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/sampleImageView"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="page_not_found.json"
+                    app:lottie_loop="true"
+                    tools:ignore="ImageContrastCheck" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/grad_for_txt_overview"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView110"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="@string/making_a_peacefull_place"
+                        android:textColor="@color/white"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/textView113"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="@string/dhiti_foundation__"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shadowColorDark="@color/light_dark_white_back"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowElevation="7dp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="flat"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageBack"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:background="@drawable/circle_bg_back_pub_note"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_back"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/blue_grey_800" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/share_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/back"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shadowColorDark="@color/light_dark_white_back"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowElevation="7dp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="flat"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/share"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_share"
+                        android:padding="5dp"
+                        app:tint="@color/blue_grey_900" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/tit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/back"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shadowColorDark="@color/veryLightGrey"
+                    app:neumorph_shadowColorLight="@color/off_white"
+                    app:neumorph_shadowElevation="7dp"
+                    app:neumorph_shapeType="flat"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/overview"
+                        android:textColor="@color/blue_grey_800"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/dhiti_splash" />
+
+                <TextView
+                    android:id="@+id/textView114"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/goal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    app:drawableLeftCompat="@drawable/ic_goal_flag"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+                <TextView
+                    android:id="@+id/textView115"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/profile_editext_shape"
+                    android:backgroundTint="@color/verify_gray_message"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    tools:text="Educate A Child, a global programme of the Education Above All Foundation, and UNICEF bring opportunity through education access and school-based management committees (SBMC) training."
+                    android:textColor="@color/overlay_dark_90"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView114"
+                    app:layout_constraintTop_toBottomOf="@+id/textView114" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView114"
+                    app:layout_constraintTop_toBottomOf="@+id/donating">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView98"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold"
+                            tools:text="₹ 2,56,23,048" />
+
+                        <TextView
+                            android:id="@+id/txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/raised_out_of"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView109"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textSize="@dimen/_9sdp"
+                        tools:text="₹ 5,00,00,000" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="15dp"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:progress="90"
+                    android:progressDrawable="@drawable/recbgprogress"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout11"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout11"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout11" />
+
+                <TextView
+                    android:id="@+id/textView120"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView114"
+                    app:layout_constraintTop_toBottomOf="@+id/progressBar"
+                    tools:text="Bilapur,Chhattisgarh 495001" />
+
+                <TextView
+                    android:id="@+id/date_or_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView114"
+                    app:layout_constraintTop_toBottomOf="@+id/textView120"
+                    tools:ignore="TextContrastCheck"
+                    tools:text="Bilapur,Chhattisgarh 495001" />
+
+                <TextView
+                    android:id="@+id/enable_registrations"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_editext_shape"
+                    android:backgroundTint="@color/deep_orange_500"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/enable_registrations"
+                    android:textColor="@color/deep_orange_500"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_registration"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView115"
+                    app:layout_constraintTop_toBottomOf="@+id/textView115" />
+
+                <TextView
+                    android:id="@+id/enable_donations"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_editext_shape"
+                    android:backgroundTint="@color/blue"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/enable_donation_"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_cause_donation_img"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView115"
+                    app:layout_constraintTop_toBottomOf="@+id/see_registrations" />
+
+                <TextView
+                    android:id="@+id/see_registrations"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/profile_editext_shape"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/see_registrations"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_see_reg"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView115"
+                    app:layout_constraintTop_toBottomOf="@+id/enable_registrations" />
+
+                <TextView
+                    android:id="@+id/donating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/click_to_donate_bg"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/donate_cloths_food_etc_for_this_event"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_cause_donation_img"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView115"
+                    app:layout_constraintTop_toBottomOf="@+id/registring"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/registring"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/click_to_register"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/register_here"
+                    android:textColor="@color/deep_orange_500"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_registration"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView115"
+                    app:layout_constraintTop_toBottomOf="@+id/set_form"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/set_form"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/click_to_register"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/set_form"
+                    android:textColor="@color/deep_orange_500"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_registration"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView115"
+                    app:layout_constraintTop_toBottomOf="@+id/enable_donations"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/textView140"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:text="@string/donate_a_sum_so_that_your_donation_is_equivalent_to_these_kind_of_donation"
+                    android:textColor="@color/blue_grey_800"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView115"
+                    app:layout_constraintTop_toBottomOf="@+id/textView118"
+                    tools:ignore="TextContrastCheck" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout17"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@+id/textView115"
+                    app:layout_constraintStart_toStartOf="@+id/textView114"
+                    app:layout_constraintTop_toBottomOf="@+id/textView140">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cause_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_amount_bg"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:textColor="@color/design_dark_grey_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:drawableStartCompat="@drawable/ic_other_"
+                            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+                            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
+                            tools:text="@string/blankets" />
+
+                        <TextView
+                            android:id="@+id/cause_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_amount_bg"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="@string/winter_caps"
+                            android:textColor="@color/design_dark_grey_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:drawableStartCompat="@drawable/ic_other_"
+                            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+                            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cause_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_amount_bg"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="@string/shawls"
+                            android:textColor="@color/design_dark_grey_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_other_"
+                            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+                            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/cause_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_amount_bg"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="@string/bags_donation"
+                            android:textColor="@color/design_dark_grey_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_other_"
+                            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+                            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cause_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_amount_bg"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="@string/shawls"
+                            android:textColor="@color/design_dark_grey_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_other_"
+                            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+                            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/cause_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_amount_bg"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="@string/bags_donation"
+                            android:textColor="@color/design_dark_grey_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_other_"
+                            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
+                            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textView118"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/profile_editext_shape"
+                    android:backgroundTint="@color/blue"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="start"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/supporters"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_or_msg"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/raised_by_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/profile_editext_shape"
+                    android:backgroundTint="@color/deep_orange_500"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="start"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/referrals"
+                    android:textColor="@color/deep_orange_500"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView114"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView114"
+                    app:layout_constraintTop_toTopOf="@+id/textView114" />
+
+                <TextView
+                    android:id="@+id/textView116"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/textView114"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout17"
+                    tools:text="Overall development" />
+
+                <TextView
+                    android:id="@+id/textView117"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="start"
+                    android:textColor="@color/jet_black"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView116"
+                    app:layout_constraintTop_toBottomOf="@+id/textView116"
+                    tools:ignore="TextContrastCheck"
+                    tools:text="Earlier, schools were considered as places to learn events in history chapter, solve tough mathematical problems or recite poems and sonnets. In the current educational scenario, a child learns to go beyond the traditional way of rote learning. They are taught to develop a mind of their own and through the flexible curriculum, curiosity is promoted. The child is freed from the shackles of mental blocks and lets his/her imagination run its course. Importance of imagination is stressed upon extensively. Play enactions and an encompassing curriculum lead to a well-developed cognitive system." />
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/about_dhiti_foundation"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/textView114"
+                    app:layout_constraintTop_toBottomOf="@+id/textView117" />
+
+                <TextView
+                    android:id="@+id/txtabout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="start"
+                    android:text="@string/dhiti_started"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/about"
+                    app:layout_constraintTop_toBottomOf="@+id/about" />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/neumorphCardView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtabout"
+                    app:neumorph_shadowColorDark="@color/gray"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shapeType="basin"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:alignmentMode="alignMargins"
+                        android:autofillHints="@string/search_notes"
+                        android:background="@null"
+                        android:drawableStart="@drawable/ic_baseline_search_24"
+                        android:drawablePadding="5dp"
+                        android:hint="@string/search_here"
+                        android:inputType="textNoSuggestions"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/blue_grey_800"
+                        android:textColorHint="@color/blue_grey_800" />
+                </soup.neumorphism.NeumorphCardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_donation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/neumorphCardView2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@color/blue"
+        android:id="@+id/donate"
+        android:layout_marginBottom="1dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:drawableEnd="@drawable/ic_contribute_love"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/donate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aryomtech.mylibrary.views.views.DuoDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.aryomtech.mylibrary.views.views.DuoMenuView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:tag="@string/tag_menu"
+        app:footer="@layout/duo_view_footer"
+        app:header="@layout/duo_view_header"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/home_contain"
+        android:background="@color/white"
+        android:tag="@string/tag_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/toolbar"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_menu"
+                app:layout_constraintBottom_toTopOf="@+id/editTextPhone2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="menu.json"
+                app:lottie_loop="false" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/website"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_menu"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="webanim.json"
+                app:lottie_loop="true" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:padding="?attr/listPreferredItemPaddingRight">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:activeItem="1"
+        app:backgroundColor="@color/red_100"
+        app:iconSize="18dp"
+        app:iconTint="@color/Algerian_red"
+        app:iconTintActive="@color/ui_red"
+        app:indicatorColor="@color/white"
+        app:indicatorRadius="10dp"
+        app:itemFontFamily="@font/quicksand_light"
+        app:itemPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main"
+        app:sideMargins="5dp"
+        app:textColor="@color/ui_red"
+        app:textSize="12sp" />
+
+</com.aryomtech.mylibrary.views.views.DuoDrawerLayout>
